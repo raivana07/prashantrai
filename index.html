@@ -1,458 +1,1420 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prashant Rai | Programmatic Advertising Portfolio</title>
-  <style>
-    :root {
-      --bg: #ffffff;
-      --text: #111111;
-      --muted: #5f6368;
-      --line: #e6e6e6;
-      --soft: #f7f7f7;
-      --card: rgba(255, 255, 255, 0.86);
-      --shadow: 0 18px 50px rgba(0, 0, 0, 0.06);
-    }
+  <head>
+    <title>Ronaldo - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: var(--bg);
-      color: var(--text);
-      font-family: Inter, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      line-height: 1.7;
-      overflow-x: hidden;
-    }
-
-    canvas#network-bg {
-      position: fixed;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    .page {
-      position: relative;
-      z-index: 1;
-    }
-
-    .shell {
-      width: min(1120px, calc(100% - 40px));
-      margin: 0 auto;
-    }
-
-    .hero {
-      min-height: 78vh;
-      display: flex;
-      align-items: center;
-      padding: 96px 0 72px;
-    }
-
-    section {
-      padding: 76px 0;
-    }
-
-    .section-inner {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
-    .section-inner.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .eyebrow {
-      margin: 0 0 14px;
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    h1,
-    h2,
-    h3 {
-      margin: 0;
-      color: var(--text);
-      line-height: 1.05;
-      letter-spacing: -0.045em;
-    }
-
-    h1 {
-      max-width: 820px;
-      font-size: clamp(56px, 9vw, 118px);
-      font-weight: 900;
-    }
-
-    h2 {
-      font-size: clamp(36px, 5vw, 68px);
-      font-weight: 900;
-    }
-
-    h3 {
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-
-    .lead {
-      max-width: 1040px;
-      margin: 34px 0 0;
-      color: #1f2937;
-      font-size: clamp(20px, 2vw, 29px);
-      line-height: 1.55;
-      letter-spacing: -0.025em;
-    }
-
-    .summary-card,
-    .closing-card {
-      margin-top: 34px;
-      padding: clamp(28px, 4vw, 46px);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: var(--card);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(10px);
-    }
-
-    .summary-card p,
-    .closing-card p {
-      margin: 0;
-      color: #202124;
-      font-size: clamp(18px, 1.8vw, 24px);
-      line-height: 1.65;
-      letter-spacing: -0.018em;
-    }
-
-    .achievement-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 38px;
-    }
-
-    .achievement-card {
-      min-height: 255px;
-      padding: 30px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: var(--card);
-      box-shadow: 0 12px 34px rgba(0, 0, 0, 0.045);
-      transition: transform 0.25s ease, border-color 0.25s ease;
-    }
-
-    .achievement-card:hover {
-      transform: translateY(-4px);
-      border-color: #cfcfcf;
-    }
-
-    .icon {
-      width: 44px;
-      height: 44px;
-      margin-bottom: 22px;
-      color: #1f2937;
-    }
-
-    .achievement-card p {
-      margin: 14px 0 0;
-      color: var(--muted);
-      font-size: 16px;
-      line-height: 1.72;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 34px;
-      padding: 0;
-      list-style: none;
-    }
-
-    .skills li {
-      padding: 10px 15px;
-      border: 1px solid #d9d9d9;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.76);
-      color: #202124;
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: -0.005em;
-    }
-
-    .footer {
-      padding: 42px 0 56px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    @media (max-width: 760px) {
-      .shell {
-        width: min(100% - 28px, 1120px);
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/style.css?v=resume-tab-border-1">
+    <script>
+      if (/^#page-[1-4]$/.test(window.location.hash)) {
+        window.history.replaceState(null, "", window.location.pathname + window.location.search);
       }
 
-      .hero {
-        min-height: auto;
-        padding: 76px 0 44px;
-      }
+      function handleFaviconError(img, initials, bgColor) {
+        if (!img || img.dataset.fallbackShown === "true") return;
+        img.dataset.fallbackShown = "true";
+        img.style.display = "none";
 
-      section {
-        padding: 54px 0;
+        const fallback = document.createElement("div");
+        fallback.className = "company-logo-fallback";
+        fallback.style.background = bgColor;
+        fallback.textContent = initials;
+        img.parentNode.insertBefore(fallback, img);
       }
+    </script>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  <div id="particles-js"></div>
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html"><span>P</span>rashant</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
 
-      .lead {
-        margin-top: 26px;
-      }
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#footer" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section class="hero-wrap js-fullheight" id="home-section">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
+          <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-center">
+          	<div class="text text-center">
+          		<span class="subheading">HEY! I AM</span>
+		  				<h1>Prashant Rai</h1>
+<h2>I'm a
+  <span
+   class="txt-rotate"
+   data-period="2000"
+   data-rotate='[ "Media Buyer", "Media Seller" ]'></span>
+</h2>
+							</div>
+            </div>
+          </div>
+        </div>
+      <div class="mouse">
+				<a href="#" class="mouse-icon">
+					<div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
+				</a>
+			</div>
+    </section>
 
-      .achievement-grid {
-        grid-template-columns: 1fr;
-      }
+    <section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
+    	<div class="container">
+    		<div class="row d-flex no-gutters">
+    			<div class="col-md-12 col-lg-12 py-5">
+    				<div class="row justify-content-start pb-3">
+		          <div class="col-md-12 heading-section ftco-animate">
+		          	<h1 class="big">About</h1>
+		            <h2 class="mb-4">About Me</h2>
+		            <p>
+Programmatic advertising professional with over 4.5 years of experience driving revenue growth and operational excellence across DSP and SSP platforms. Skilled in managing end-to-end campaigns, optimizing integrations, and maximizing yield through strategic demand and supply alignment.
+</p>
 
-      .achievement-card {
-        min-height: 0;
-        padding: 24px;
-      }
+<ul class="about-info mt-4 px-md-0 px-2">
+  <li class="d-flex"><span>Name:</span> <span>Prashant Rai</span></li>
+  <li class="d-flex"><span>Experience:</span> <span>4.5+ Years</span></li>
+  <li class="d-flex"><span>Location:</span> <span>Bengaluru, Karnataka, India</span></li>
+  <li class="d-flex"><span>Email:</span> <span>raipra00@gmail.com</span></li>
+  <li class="d-flex"><span>Domain:</span> <span>Ad Operations | Programmatic Workflow | SSP & DSP</span></li>
+</ul>
+		          </div>
+		        </div>
+	          <div class="counter-wrap ftco-animate d-flex mt-md-3">
+              <div class="text">
+              	<p class="stat-line">
+                  <span class="stat-item">
+                    <strong>50+</strong> Global Publishers Managed
+                  </span>
+                </p>
+                <p class="about-action-row"><a href="Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-3 px-3 btn-cv">
+  <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+    <polyline points="7 10 12 15 17 10"></polyline>
+    <line x1="12" y1="15" x2="12" y2="3"></line>
+  </svg>
+  <span>Download CV</span>
+</a><button type="button" class="btn btn-primary py-3 px-3 hire-modal-trigger btn-hire" id="openHireModal">
+  <span>Hire Me</span>
+  <span class="btn-arrow" aria-hidden="true">&#8594;</span>
+</button></p>
+              </div>
+	          </div>
+	        </div>
+        </div>
+    	</div>
+    </section>
 
-      .skills li {
-        font-size: 13px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <canvas id="network-bg" aria-hidden="true"></canvas>
+    <section class="ftco-section ftco-partner client-logo-section">
+      <div class="container">
+        <div class="client-logo-grid">
+          <div class="client-logo-item"><img src="images/partner-1.png?v=transparent" alt="Client logo 1" width="450" height="88" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item"><img src="images/partner-2.png?v=transparent" alt="Client logo 2" width="271" height="103" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item"><img src="images/partner-3.png?v=transparent" alt="Client logo 3" width="598" height="268" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item"><img src="images/partner-4.png?v=transparent" alt="Client logo 4" width="769" height="115" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item"><img src="images/partner-5.png?v=transparent" alt="Client logo 5" width="677" height="369" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item"><img src="images/partner-6.png?v=transparent" alt="Client logo 6" width="273" height="79" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item"><img src="images/partner-7.png?v=transparent" alt="Client logo 7" width="340" height="169" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item"><img src="images/partner-8.png?v=transparent" alt="Client logo 8" width="334" height="150" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item"><img src="images/partner-9.png?v=transparent" alt="Client logo 9" width="342" height="150" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item"><img src="images/partner-10.png?v=transparent" alt="Client logo 10" width="336" height="136" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item"><img src="images/partner-11.png?v=transparent" alt="Client logo 11" width="319" height="175" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item"><img src="images/partner.12.png?v=transparent" alt="Client logo 12" width="319" height="175" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item"><img src="images/partner-13.png?v=transparent" alt="Client logo 13" width="334" height="150" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item"><img src="images/partner-14.png?v=transparent" alt="Client logo 14" width="336" height="153" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item"><img src="images/partner-15.png?v=transparent" alt="Client logo 15" width="333" height="165" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item" aria-hidden="true"><img src="images/partner-1.png?v=transparent" alt="" width="450" height="88" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item" aria-hidden="true"><img src="images/partner-2.png?v=transparent" alt="" width="271" height="103" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item" aria-hidden="true"><img src="images/partner-3.png?v=transparent" alt="" width="598" height="268" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item" aria-hidden="true"><img src="images/partner-4.png?v=transparent" alt="" width="769" height="115" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item" aria-hidden="true"><img src="images/partner-5.png?v=transparent" alt="" width="677" height="369" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item" aria-hidden="true"><img src="images/partner-6.png?v=transparent" alt="" width="273" height="79" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item" aria-hidden="true"><img src="images/partner-7.png?v=transparent" alt="" width="340" height="169" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item" aria-hidden="true"><img src="images/partner-8.png?v=transparent" alt="" width="334" height="150" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item" aria-hidden="true"><img src="images/partner-9.png?v=transparent" alt="" width="342" height="150" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item" aria-hidden="true"><img src="images/partner-10.png?v=transparent" alt="" width="336" height="136" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item" aria-hidden="true"><img src="images/partner-11.png?v=transparent" alt="" width="319" height="175" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item" aria-hidden="true"><img src="images/partner.12.png?v=transparent" alt="" width="319" height="175" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item" aria-hidden="true"><img src="images/partner-13.png?v=transparent" alt="" width="334" height="150" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item" aria-hidden="true"><img src="images/partner-14.png?v=transparent" alt="" width="336" height="153" loading="lazy" decoding="async"></div>
+          <div class="client-logo-item" aria-hidden="true"><img src="images/partner-15.png?v=transparent" alt="" width="333" height="165" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </section>
 
-  <main class="page">
-    <section class="hero" id="about">
-      <div class="shell section-inner">
-        <p class="eyebrow">Prashant Rai</p>
-        <h1>About Me</h1>
-        <p class="lead">
-          Programmatic advertising professional with over 4.5 years of experience driving
-          revenue growth and operational excellence across DSP and SSP platforms. Skilled in
-          managing end-to-end campaigns, optimizing integrations, and maximizing yield through
-          strategic demand and supply alignment.
+    <section class="ftco-section ftco-no-pb goto-here" id="resume-section">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-3">
+				    <nav id="navi">
+					    <ul>
+					      <li><button type="button" data-page="page-1">Education</button></li>
+					      <li><button type="button" data-page="page-2">Experience</button></li>
+					      <li><button type="button" data-page="page-3">Skills</button></li>
+					      <li><button type="button" data-page="page-4">Certifications</button></li>
+					    </ul>
+					  </nav>
+					</div>
+					<div class="col-md-9">
+					  <div id="page-1" class= "page one">
+					  	<h2 class="heading education-heading">Education</h2>
+<div class="resume-wrap d-flex ftco-animate edu-card bibs-card">
+  <div class="icon edu-icon bibs-icon d-flex align-items-center justify-content-center">
+    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/BIBS_Logo.jpg?width=512" alt="Bengal Institute of Business Studies Logo" width="60" height="60" loading="lazy" decoding="async" style="object-fit: contain;" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'flaticon-ideas\'></span>';">
+  </div>
+  <div class="text pl-3">
+    <span class="date edu-date">2015 – 2017</span>
+    <h2 class="edu-degree">PGPBM + MBA</h2>
+    <a class="position institution-link" href="https://www.bibs.co.in/" target="_blank" rel="noopener">Bengal Institute of Business Studies, Kolkata</a>
+    <p class="edu-description">Specialized in business management, marketing strategy, and operations.</p>
+  </div>
+</div>
+
+<div class="resume-wrap d-flex ftco-animate edu-card mgkvp-card">
+  <div class="icon edu-icon mgkvp-icon d-flex align-items-center justify-content-center">
+    <img src="https://en.wikipedia.org/wiki/Special:FilePath/Mahatma_Gandhi_Kashi_Vidyapith_logo.png?width=128" alt="MGKVP Logo" width="52" height="52" loading="lazy" decoding="async" style="object-fit: contain; border-radius: 8px;" onerror="if (!this.dataset.fallback) { this.dataset.fallback='favicon128'; this.src='https://www.google.com/s2/favicons?domain=mgkvp.ac.in&sz=128'; } else if (this.dataset.fallback === 'favicon128') { this.dataset.fallback='favicon64'; this.src='https://www.google.com/s2/favicons?domain=mgkvp.ac.in&sz=64'; } else { this.style.display='none'; this.nextElementSibling.style.display='inline-flex'; }">
+    <span class="mgkvp-fallback" aria-hidden="true">MG</span>
+  </div>
+  <div class="text pl-3">
+    <span class="date edu-date">2012 – 2015</span>
+    <h2 class="edu-degree">Bachelor of Commerce</h2>
+    <a class="position institution-link" href="https://mgkvp.ac.in/" target="_blank" rel="noopener">Mahatma Gandhi Kashi Vidyapith, Varanasi</a>
+    <p class="edu-description">Focused on accounting, business fundamentals, and finance.</p>
+  </div>
+</div>
+
+<div class="resume-wrap d-flex ftco-animate edu-card dsim-card">
+  <div class="icon edu-icon dsim-icon d-flex align-items-center justify-content-center">
+    <img src="images/DSIM.png" alt="Delhi School of Internet Marketing Logo" width="60" height="60" loading="lazy" decoding="async" style="object-fit: contain;" onerror="this.style.display='none'; this.parentElement.innerHTML='<span class=\'flaticon-ideas\'></span>';">
+  </div>
+  <div class="text pl-3">
+    <span class="date edu-date">Feb 2019 – May 2019</span>
+    <h2 class="edu-degree">Digital Marketing Certification</h2>
+    <a class="position institution-link" href="https://dsim.in/" target="_blank" rel="noopener">Delhi School of Internet Marketing, Delhi</a>
+    <p class="edu-description">Hands-on training in SEO, PPC, social media marketing, and analytics.</p>
+  </div>
+</div>
+</div>
+					  <div id="page-2" class= "page two">
+					  	<h2 class="heading">Experience</h2>
+					    <div class="resume-wrap d-flex ftco-animate exp-card cubera-card">
+  <div class="icon exp-icon d-flex align-items-center justify-content-center">
+    <a href="https://cubera.co/" target="_blank" rel="noopener noreferrer">
+      <img src="images/cubera-experience-logo.png" alt="Cubera Tech Logo" width="109" height="60" loading="lazy" decoding="async" style="object-fit:contain; border-radius:8px;" onerror="handleFaviconError(this,'CT','#0071e3')">
+    </a>
+  </div>
+  <div class="text pl-3">
+    <span class="date">Aug 2025 – Present</span>
+    <h2>Sr. Executive – Ad Operations</h2>
+    <a href="https://cubera.co/" target="_blank" rel="noopener noreferrer" class="position company-link">Cubera Tech India Pvt Ltd, Bangalore</a>
+    <p>
+      • Managed end-to-end OpenRTB integrations between DSPs and SSPs<br>
+      • Resolved discrepancies (10–50%) using API validation & logs<br>
+      • Collaborated with GroupM, Dentsu, Publicis, WPP<br>
+      • Scaled revenue from $5K/month to $23K/month<br>
+      • Mentored junior team members
+    </p>
+  </div>
+</div>
+
+<div class="resume-wrap d-flex ftco-animate exp-card datawrkz-card">
+  <div class="icon exp-icon d-flex align-items-center justify-content-center">
+    <a href="https://www.datawrkz.com/" target="_blank" rel="noopener noreferrer">
+      <img src="https://www.google.com/s2/favicons?domain=datawrkz.com&sz=128" alt="Datawrkz Logo" width="52" height="52" loading="lazy" decoding="async" style="object-fit:contain; border-radius:8px;" onerror="handleFaviconError(this,'DW','#5e5ce6')">
+    </a>
+  </div>
+  <div class="text pl-3">
+    <span class="date">May 2024 – Aug 2025</span>
+    <h2>Sr. Executive – Ad Operations</h2>
+    <a href="https://www.datawrkz.com/" target="_blank" rel="noopener noreferrer" class="position company-link">Datawrkz Media Pvt Ltd, Bangalore</a>
+    <p>
+      • Managed GAM360 & Aniview campaigns<br>
+      • Handled $500K+ advertiser budgets<br>
+      • Executed 30M impression PG deals<br>
+      • Created VAST/VPAID tags & macros<br>
+      • Debugged ads using Chrome DevTools
+    </p>
+  </div>
+</div>
+
+<div class="resume-wrap d-flex ftco-animate exp-card iopex-card">
+  <div class="icon exp-icon d-flex align-items-center justify-content-center">
+    <a href="https://www.iopex.com/" target="_blank" rel="noopener noreferrer">
+      <img src="images/iopex-experience-logo.png" alt="iOPEX Technologies Logo" width="64" height="64" loading="lazy" decoding="async" style="object-fit:contain; border-radius:8px;" onerror="handleFaviconError(this,'iO','#34c759')">
+    </a>
+  </div>
+  <div class="text pl-3">
+    <span class="date">Feb 2024 – Apr 2024</span>
+    <h2>Technical Account Manager</h2>
+    <a href="https://www.iopex.com/" target="_blank" rel="noopener noreferrer" class="position company-link">IOPEX Technologies, Bangalore</a>
+    <p>
+      • Managed CPA, ROAS campaigns on Quantcast DSP<br>
+      • Worked with Salesforce & GTM<br>
+      • Provided performance insights & optimization strategies
+    </p>
+  </div>
+</div>
+
+<div class="resume-wrap d-flex ftco-animate exp-card greedygame-card">
+  <div class="icon exp-icon d-flex align-items-center justify-content-center">
+    <a href="https://greedygame.com/" target="_blank" rel="noopener noreferrer">
+      <img src="images/greedygame-experience-logo.png" alt="GreedyGame Logo" width="64" height="64" loading="lazy" decoding="async" style="object-fit:contain; border-radius:8px;" onerror="handleFaviconError(this,'GG','#ff6b35')">
+    </a>
+  </div>
+  <div class="text pl-3">
+    <span class="date">Apr 2022 – Dec 2023</span>
+    <h2>Ad Operations Executive</h2>
+    <a href="https://greedygame.com/" target="_blank" rel="noopener noreferrer" class="position company-link">Greedy Game Media Pvt Ltd, Bangalore</a>
+    <p>
+      • Managed ad units across Web, App & CTV<br>
+      • Handled OpenRTB endpoint setup<br>
+      • Optimized inventory & revenue performance
+    </p>
+  </div>
+</div>
+
+<div class="resume-wrap d-flex ftco-animate exp-card myndtrain-card">
+  <div class="icon exp-icon d-flex align-items-center justify-content-center">
+    <a href="https://about.me/myndtrain" target="_blank" rel="noopener noreferrer">
+      <img src="images/myndtrain-education.png" alt="Myndtrain Logo" width="112" height="36" loading="lazy" decoding="async" style="object-fit:contain; border-radius:8px;" onerror="handleFaviconError(this,'MT','#ff9f0a')">
+    </a>
+  </div>
+  <div class="text pl-3">
+    <span class="date">Dec 2019 – Dec 2020</span>
+    <h2>Social Media Executive</h2>
+    <a href="https://about.me/myndtrain" target="_blank" rel="noopener noreferrer" class="position company-link">Myndtrain Education, Delhi</a>
+    <p>
+      • Managed Facebook Ads & email marketing campaigns<br>
+      • Implemented CRM systems (HubSpot)<br>
+      • Optimized campaigns using performance metrics
+    </p>
+  </div>
+</div>
+
+<div class="resume-wrap d-flex ftco-animate exp-card woi-card">
+  <div class="icon exp-icon d-flex align-items-center justify-content-center">
+    <a href="https://www.worldoverseasimmigration.com/" target="_blank" rel="noopener noreferrer">
+      <img src="images/woi-experience-logo.png" alt="World Overseas Immigration Logo" width="116" height="30" loading="lazy" decoding="async" style="object-fit:contain; border-radius:8px;" onerror="handleFaviconError(this,'WO','#1d4ed8')">
+    </a>
+  </div>
+  <div class="text pl-3">
+    <span class="date">Jun 2019 – Oct 2019</span>
+    <h2>Digital Marketing Associate</h2>
+    <a href="https://www.worldoverseasimmigration.com/" target="_blank" rel="noopener noreferrer" class="position company-link">World Overseas Immigration Consultancy, Delhi</a>
+    <p>
+      • Managed WordPress website & PPC campaigns<br>
+      • Handled $5K–$10K monthly ad budgets<br>
+      • Conducted keyword research & geo-targeting
+    </p>
+  </div>
+</div>
+</div>
+  <div id="page-3" class="page three">
+  <h2 class="heading">Skills</h2>
+
+<div class="skills-tabs">
+
+  <div class="tabs-header">
+    <button class="tab-btn active" data-tab="ortb">ORTB</button>
+    <button class="tab-btn" data-tab="ssp">SSP</button>
+    <button class="tab-btn" data-tab="dsp">DSP</button>
+  </div>
+
+
+  <div class="tab-content active" id="ortb">
+
+  <div class="skills-grid-2">
+
+    <!-- LEFT -->
+    <div class="column">
+
+      <div class="mini-card">
+        <h4>Partner Onboarding</h4>
+        <p>Managing technical setup and bid validation for new DSP/SSP integrations.</p>
+      </div>
+
+      <div class="mini-card">
+        <h4>Log-Level Troubleshooting</h4>
+        <p>Analyzing server logs to resolve bid losses, timeouts, and integration errors.</p>
+      </div>
+
+      <div class="mini-card">
+        <h4>IVT Forensics</h4>
+        <p>Auditing traffic spikes to filter invalid traffic and ensure organic growth.</p>
+      </div>
+
+      <div class="mini-card">
+        <h4>Endpoint Activation</h4>
+        <p>Handling end-to-end technical enablement for programmatic demand & supply.</p>
+      </div>
+
+      <div class="mini-card">
+        <h4>Revenue Scaling</h4>
+        <p>Identifying opportunities and optimizing supply to increase revenue.</p>
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="column">
+
+      <div class="mini-card">
+        <h4>Yield Optimization</h4>
+        <p>Balancing demand onboarding with supply performance to maximize revenue.</p>
+      </div>
+
+      <div class="mini-card">
+        <h4>Demand Activation</h4>
+        <p>Enabling demand sources to improve auction density and win rates.</p>
+      </div>
+
+      <div class="mini-card">
+        <h4>API Reconciliation</h4>
+        <p>Cross-verifying SSP API data with internal systems for accuracy.</p>
+      </div>
+
+      <div class="mini-card">
+        <h4>Discrepancy Management</h4>
+        <p>Resolving reporting differences across platforms.</p>
+      </div>
+
+      <div class="mini-card">
+        <h4>Payout Validation</h4>
+        <p>Auditing delivery metrics to ensure accurate partner payments.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+  <div class="tab-content" id="ssp">
+
+  <div class="skills-grid-2">
+
+    <div class="column">
+
+      <div class="mini-card">
+        <h4>Waterfall Management</h4>
+        <p>Managing complex demand chains (GAM360, Aniview, SSPs) to maximize fill rate and revenue.</p>
+      </div>
+
+      <div class="mini-card">
+        <h4>Media Plan Execution</h4>
+        <p>Handled campaigns up to $500K for brands like McDonald's & Toyota with agency coordination.</p>
+      </div>
+
+      <div class="mini-card mobile-hide">
+        <h4>Programmatic Deals (PG)</h4>
+        <p>Executed large-scale deals (30M impressions) managing CPM and publisher margins.</p>
+      </div>
+
+      <div class="mini-card mobile-hide">
+        <h4>Video Tagging (VAST/VPAID)</h4>
+        <p>Configured video ads with macros like vpmute, env, plcmt for cross-platform delivery.</p>
+      </div>
+
+      <div class="mini-card mobile-hide">
+        <h4>Ad Debugging</h4>
+        <p>Used Chrome DevTools to analyze VAST errors, response codes, and delivery issues.</p>
+      </div>
+
+    </div>
+
+    <div class="column">
+
+      <div class="mini-card">
+        <h4>Multi-Platform Setup</h4>
+        <p>Managed ad units across Web, Mobile Apps, and CTV environments.</p>
+      </div>
+
+      <div class="mini-card">
+        <h4>Inventory Optimization</h4>
+        <p>Backfilled unsold inventory using GAM360 line items to maximize revenue.</p>
+      </div>
+
+      <div class="mini-card mobile-hide">
+        <h4>MCM Onboarding</h4>
+        <p>Handled Google MCM workflows using Manage Inventory & Account setup.</p>
+      </div>
+
+      <div class="mini-card mobile-hide">
+        <h4>Brand Safety</h4>
+        <p>Managed bundle blocking, category filters, and geo-targeting rules.</p>
+      </div>
+
+      <div class="mini-card mobile-hide">
+        <h4>Performance Optimization</h4>
+        <p>Resolved SDK issues, tracked discrepancies, and improved revenue via weekly analysis.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+  <div class="tab-content" id="dsp">
+
+  <div class="skills-grid-2">
+
+    <!-- LEFT -->
+    <div class="column">
+
+      <div class="mini-card">
+        <h4>Campaign Management</h4>
+        <p>
+          Managed end-to-end IO lifecycle using Salesforce and executed campaigns
+          in Quantcast & DV360 from setup to launch.
         </p>
       </div>
-    </section>
 
-    <section id="summary">
-      <div class="shell section-inner">
-        <p class="eyebrow">Professional Summary</p>
-        <h2>Programmatic Growth, Built With Operational Discipline</h2>
-        <div class="summary-card">
-          <p>
-            With over 4 years of specialized experience in programmatic advertising, ad
-            operations, and publisher/advertiser account management across leading SSP and DSP
-            platforms. Currently serving as Senior Executive - Ad Operations at Datawrkz Media.
-            Successfully managed complex programmatic campaigns, including executing a 30 million
-            impression programmatic guaranteed deal for Publicis Group across 20 premium Business
-            &amp; Finance websites at $2.10 CPM.
-          </p>
-        </div>
+      <div class="mini-card">
+        <h4>Technical Tracking & Sync</h4>
+        <p>
+          Resolved conversion tracking issues via GTM and ensured accurate
+          data sync with Salesforce reporting.
+        </p>
       </div>
-    </section>
 
-    <section id="achievements">
-      <div class="shell section-inner">
-        <p class="eyebrow">Key Achievements</p>
-        <h2>Operational Strength Across the Programmatic Stack</h2>
-        <div class="achievement-grid">
-          <article class="achievement-card">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M4 7h16"></path><path d="M7 7v10"></path><path d="M17 7v10"></path><path d="M5 17h14"></path><path d="M9 11h6"></path><path d="M9 14h6"></path>
-            </svg>
-            <h3>OpenRTB Operations Excellence</h3>
-            <p>
-              Configured and managed demand/supply partner endpoints, implemented bundle ID
-              blocking, category filtering, and geo-targeting, while adjusting QPS based on
-              traffic patterns and partner capacity.
-            </p>
-          </article>
-
-          <article class="achievement-card">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M8 9l-4 3 4 3"></path><path d="M16 9l4 3-4 3"></path><path d="M14 5l-4 14"></path>
-            </svg>
-            <h3>Technical Proficiency</h3>
-            <p>
-              Created customized VAST/VPAID video ad tags with macro adjustments, utilized Chrome
-              DevTools for debugging ad delivery issues, and crafted SQL queries for campaign
-              performance reporting and analysis.
-            </p>
-          </article>
-
-          <article class="achievement-card">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M4 19V5"></path><path d="M4 19h16"></path><path d="M8 15l3-4 3 2 5-7"></path>
-            </svg>
-            <h3>Revenue Optimization</h3>
-            <p>
-              Conducted weekly publisher performance reviews, implemented waterfall configurations
-              across multiple SSPs, and optimized line-item setups to maximize fill rates and
-              revenue generation.
-            </p>
-          </article>
-
-          <article class="achievement-card">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M12 3v18"></path><path d="M3 12h18"></path><path d="M5.6 5.6l12.8 12.8"></path><path d="M18.4 5.6L5.6 18.4"></path>
-            </svg>
-            <h3>Campaign Management</h3>
-            <p>
-              Managed end-to-end programmatic campaigns on DV360 and Quantcast DSP for premium
-              brands including Razor Blade, Accor Hotels, and Standard Chartered Bank,
-              consistently meeting KPI targets and ROI objectives.
-            </p>
-          </article>
-        </div>
+      <div class="mini-card">
+        <h4>Strategic Optimization</h4>
+        <p>
+          Collaborated with Account Managers, implementing performance-driven
+          technical strategies to improve ROI.
+        </p>
       </div>
-    </section>
 
-    <section id="toolkit">
-      <div class="shell section-inner">
-        <p class="eyebrow">Technical Skills / Toolkit</p>
-        <h2>Platforms, Protocols, and Operational Tools</h2>
-        <ul class="skills">
-          <li>Google Ad Manager 360</li>
-          <li>DV360</li>
-          <li>OpenRTB</li>
-          <li>VAST/VPAID</li>
-          <li>SQL</li>
-          <li>PubMatic</li>
-          <li>Magnite</li>
-          <li>Xandr</li>
-          <li>Amazon Publisher Services</li>
-          <li>GAM360</li>
-          <li>CTV</li>
-          <li>Web &amp; App Inventory</li>
-          <li>Chrome DevTools</li>
-          <li>Quantcast DSP</li>
-          <li>Waterfall Configuration</li>
-        </ul>
+      <div class="mini-card">
+        <h4>Data-Driven Reporting</h4>
+        <p>
+          Used FreeWheel to analyze delivery reports and monitor inventory
+          performance across campaigns.
+        </p>
       </div>
-    </section>
 
-    <section id="closing">
-      <div class="shell section-inner">
-        <p class="eyebrow">Closing Statement</p>
-        <h2>Technical Depth With Revenue Strategy</h2>
-        <div class="closing-card">
-          <p>
-            What sets me apart is my combination of technical depth in ad operations and strategic
-            thinking in revenue optimization. My experience working with both publisher-side (SSP)
-            and advertiser-side (DSP) platforms gives me a holistic understanding of the
-            programmatic ecosystem.
-          </p>
-        </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="column">
+
+      <div class="mini-card">
+        <h4>Dynamic Budgeting</h4>
+        <p>
+          Optimized spend in real-time within DSP to maximize performance
+          across top audiences and time slots.
+        </p>
       </div>
-    </section>
 
-    <footer class="footer">
-      <div class="shell">Prashant Rai | Programmatic Advertising</div>
-    </footer>
-  </main>
+      <div class="mini-card">
+        <h4>Daily Pacing Control</h4>
+        <p>
+          Monitored campaign pacing in Quantcast to ensure full budget
+          utilization without overspending.
+        </p>
+      </div>
 
-  <script>
-    const canvas = document.getElementById("network-bg");
-    const ctx = canvas.getContext("2d");
-    let width = 0;
-    let height = 0;
-    let points = [];
+      <div class="mini-card">
+        <h4>Frequency Management</h4>
+        <p>
+          Controlled ad exposure across devices to reduce fatigue and
+          improve reach efficiency.
+        </p>
+      </div>
 
-    function resizeCanvas() {
-      width = window.innerWidth;
-      height = window.innerHeight;
-      canvas.width = Math.floor(width * window.devicePixelRatio);
-      canvas.height = Math.floor(height * window.devicePixelRatio);
-      canvas.style.width = width + "px";
-      canvas.style.height = height + "px";
-      ctx.setTransform(window.devicePixelRatio, 0, 0, window.devicePixelRatio, 0, 0);
-      createPoints();
-    }
+      <div class="mini-card">
+        <h4>Creative Optimization</h4>
+        <p>
+          Improved campaign performance by analyzing CTR/VTR and
+          optimizing creatives for higher conversions.
+        </p>
+      </div>
 
-    function createPoints() {
-      const count = Math.max(32, Math.min(78, Math.floor(width / 26)));
-      points = Array.from({ length: count }, () => ({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.22,
-        vy: (Math.random() - 0.5) * 0.22,
-        r: Math.random() * 1.6 + 1.2
-      }));
-    }
+    </div>
 
-    function drawNetwork() {
-      ctx.clearRect(0, 0, width, height);
+  </div>
 
-      for (const p of points) {
-        p.x += p.vx;
-        p.y += p.vy;
+</div>
+</div>
+</div>
 
-        if (p.x < -20) p.x = width + 20;
-        if (p.x > width + 20) p.x = -20;
-        if (p.y < -20) p.y = height + 20;
-        if (p.y > height + 20) p.y = -20;
+					  <div id="page-4" class="page four">
+              <section class="cert-section">
+                <h2 class="heading cert-heading">Certifications</h2>
+
+                <div class="cert-slider-wrapper">
+                  <button class="cert-nav cert-prev" type="button" aria-label="Previous">&#8592;</button>
+
+                  <div class="cert-slider-track">
+                    <div class="cert-slide active" data-index="0">
+                      <div class="cert-slide-inner">
+                        <img src="images/cert11.png.jpeg" alt="Quantcast Digital Advertising Certification" width="812" height="552" loading="lazy" decoding="async">
+                        <a href="https://www.quantcast.com/home" target="_blank" rel="noopener noreferrer" class="cert-verify-btn">Verify &#8599;</a>
+                        <div class="cert-issuer-badge"><img src="https://www.google.com/s2/favicons?domain=quantcast.com&sz=32" alt="Quantcast" width="20" height="20" loading="lazy" decoding="async"></div>
+                      </div>
+                    </div>
+
+                    <div class="cert-slide" data-index="1">
+                      <div class="cert-slide-inner">
+                        <img src="images/cert10.png.jpeg" alt="Quantcast Platform Certification" width="810" height="557" loading="lazy" decoding="async">
+                        <a href="https://www.quantcast.com/home" target="_blank" rel="noopener noreferrer" class="cert-verify-btn">Verify &#8599;</a>
+                        <div class="cert-issuer-badge"><img src="https://www.google.com/s2/favicons?domain=quantcast.com&sz=32" alt="Quantcast" width="20" height="20" loading="lazy" decoding="async"></div>
+                      </div>
+                    </div>
+
+                    <div class="cert-slide" data-index="2">
+                      <div class="cert-slide-inner">
+                        <img src="images/cert13.png.jpeg" alt="Google Ads Display Certification" width="737" height="561" loading="lazy" decoding="async">
+                        <a href="https://skillshop.credential.net/29b248cf-d357-4239-94c7-6cf289efb871" target="_blank" rel="noopener noreferrer" class="cert-verify-btn">Verify &#8599;</a>
+                        <div class="cert-issuer-badge"><img src="https://www.google.com/s2/favicons?domain=google.com&sz=32" alt="Google" width="20" height="20" loading="lazy" decoding="async"></div>
+                      </div>
+                    </div>
+
+                    <div class="cert-slide" data-index="3">
+                      <div class="cert-slide-inner">
+                        <img src="images/cert14.png.jpeg" alt="GreedyGame Most Valuable Player Certificate" width="1600" height="1184" loading="lazy" decoding="async">
+                        <a href="https://greedygame.com/" target="_blank" rel="noopener noreferrer" class="cert-verify-btn">Verify &#8599;</a>
+                        <div class="cert-issuer-badge"><img src="https://www.google.com/s2/favicons?domain=greedygame.com&sz=32" alt="GreedyGame" width="20" height="20" loading="lazy" decoding="async"></div>
+                      </div>
+                    </div>
+
+                    <div class="cert-slide" data-index="4">
+                      <div class="cert-slide-inner">
+                        <img src="images/cert15.png.jpeg" alt="LinkedIn Programmatic Advertising Foundations Certificate" width="678" height="521" loading="lazy" decoding="async">
+                        <a href="https://www.linkedin.com/learning/certificates/562588625d63a78d4ae21a40dbabfb5b578ace369648a2cd67b82111aa48a22f" target="_blank" rel="noopener noreferrer" class="cert-verify-btn">Verify &#8599;</a>
+                        <div class="cert-issuer-badge"><img src="https://www.google.com/s2/favicons?domain=linkedin.com&sz=32" alt="LinkedIn" width="20" height="20" loading="lazy" decoding="async"></div>
+                      </div>
+                    </div>
+
+                    <div class="cert-slide" data-index="5">
+                      <div class="cert-slide-inner">
+                        <img src="images/cert16.png.jpeg" alt="LinkedIn Advertising Foundations Certificate" width="1280" height="989" loading="lazy" decoding="async">
+                        <a href="https://www.linkedin.com/learning/certificates/c81abc834993b7103517579f25277480ba9297466f2fa69f946d70e1a43db67b" target="_blank" rel="noopener noreferrer" class="cert-verify-btn">Verify &#8599;</a>
+                        <div class="cert-issuer-badge"><img src="https://www.google.com/s2/favicons?domain=linkedin.com&sz=32" alt="LinkedIn" width="20" height="20" loading="lazy" decoding="async"></div>
+                      </div>
+                    </div>
+
+                    <div class="cert-slide" data-index="6">
+                      <div class="cert-slide-inner">
+                        <img src="images/cert12.png.jpng" alt="LinkedIn Marketing Tools Digital Marketing Tools and Services Certificate" width="910" height="702" loading="lazy" decoding="async">
+                        <a href="https://www.linkedin.com/learning/certificates/df8500f8523447f926d8cfc479be5fef85c810f13a52e86827f4de20bf6236a4" target="_blank" rel="noopener noreferrer" class="cert-verify-btn">Verify &#8599;</a>
+                        <div class="cert-issuer-badge"><img src="https://www.google.com/s2/favicons?domain=linkedin.com&sz=32" alt="LinkedIn" width="20" height="20" loading="lazy" decoding="async"></div>
+                      </div>
+                    </div>
+
+                    <div class="cert-slide" data-index="7">
+                      <div class="cert-slide-inner">
+                        <img src="images/cert17.png.jpng" alt="LinkedIn Marketing Foundations The Marketing Funnel Certificate" width="907" height="705" loading="lazy" decoding="async">
+                        <a href="https://www.linkedin.com/learning/certificates/512ceba3e5d00f020206617457dcf3919460d639bec2d58bdb973160768666dd" target="_blank" rel="noopener noreferrer" class="cert-verify-btn">Verify &#8599;</a>
+                        <div class="cert-issuer-badge"><img src="https://www.google.com/s2/favicons?domain=linkedin.com&sz=32" alt="LinkedIn" width="20" height="20" loading="lazy" decoding="async"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button class="cert-nav cert-next" type="button" aria-label="Next">&#8594;</button>
+                </div>
+
+                <div class="cert-dots">
+                  <span class="cert-dot active" data-dot="0"></span>
+                  <span class="cert-dot" data-dot="1"></span>
+                  <span class="cert-dot" data-dot="2"></span>
+                  <span class="cert-dot" data-dot="3"></span>
+                  <span class="cert-dot" data-dot="4"></span>
+                  <span class="cert-dot" data-dot="5"></span>
+                  <span class="cert-dot" data-dot="6"></span>
+                  <span class="cert-dot" data-dot="7"></span>
+                </div>
+
+                <p class="cert-counter"><span class="cert-current">1</span> / <span class="cert-total">8</span></p>
+              </section>
+            </div>
+					</div>
+				</div>
+			</div>
+</section>
+
+   <footer class="ftco-footer ftco-section" id="footer">
+  <div id="particles-footer"></div>
+  <div class="container footer-content">
+    <div class="footer-divider"></div>
+    <div class="footer-main-row footer-grid">
+
+  <!-- ABOUT -->
+  <div class="footer-col">
+    <div class="ftco-footer-widget">
+      <h2 class="ftco-heading-2 footer-heading">About</h2>
+      <p>
+        Technical Account Manager specializing in Programmatic Advertising,
+        with experience in DSP, SSP, and ORTB. Skilled in managing publisher
+        relationships and optimizing ad performance.
+      </p>
+    </div>
+  </div>
+
+  <!-- LINKS -->
+  <div class="footer-col">
+    <div class="ftco-footer-widget">
+      <h2 class="ftco-heading-2 footer-heading">Links</h2>
+      <ul class="list-unstyled footer-contact-list footer-links">
+        <li><a href="#home-section">Home</a></li>
+        <li><a href="#about-section">About</a></li>
+        <li><a href="#resume-section">Resume</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+    </div>
+    <div class="ftco-footer-widget footer-expertise-widget">
+      <h2 class="ftco-heading-2 footer-heading">Expertise</h2>
+      <div class="footer-skill-tabs">
+        <a href="#page-3" class="footer-skill-tab active" data-footer-tab="ortb">ORTB</a>
+        <a href="#page-3" class="footer-skill-tab" data-footer-tab="ssp">SSP</a>
+        <a href="#page-3" class="footer-skill-tab" data-footer-tab="dsp">DSP</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT (ONLY ONE!) -->
+  <div class="footer-col">
+    <div class="ftco-footer-widget">
+      <h2 class="ftco-heading-2 footer-heading">Contact</h2>
+      <ul class="list-unstyled footer-detail-list">
+
+        <li>
+          <span>Email:</span>
+          <a href="mailto:raipra00@gmail.com">
+            raipra00@gmail.com
+          </a>
+        </li>
+
+        <li>
+          <span>LinkedIn:</span>
+          <a href="https://linkedin.com/in/pra00" target="_blank" rel="noopener">
+            linkedin.com/in/pra00
+          </a>
+        </li>
+
+        <li>
+          <span>Location:</span>
+          <a href="https://www.google.com/maps?q=Bengaluru,Karnataka,India" target="_blank">
+            Bengaluru, Karnataka, India
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+</div>
+    <div class="footer-bottom-row">
+      <p>© 2026 Prashant Rai | Programmatic Advertising</p>
+    </div>
+  </div>
+</footer>
+    
+  
+
+  <!-- loader -->
+<div id="ftco-loader" class="show fullscreen">
+  <svg class="circular" width="48px" height="48px">
+    <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+    <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
+  </svg>
+</div>
+
+<div class="hire-modal-backdrop" id="hireModal" aria-hidden="true">
+  <div class="hire-modal" role="dialog" aria-modal="true" aria-labelledby="hireModalTitle">
+    <button type="button" class="hire-modal-close" id="closeHireModal" aria-label="Close">&times;</button>
+    <h2 id="hireModalTitle">Let's Work Together</h2>
+    <p class="hire-modal-subtitle">Fill in your details and I'll get back to you shortly.</p>
+    <form class="hire-form" id="hireForm" novalidate>
+      <div class="hire-field">
+        <input type="text" id="hireName" name="name" placeholder="Your Full Name" required>
+        <span class="hire-error" data-error-for="hireName"></span>
+      </div>
+      <div class="hire-field">
+        <input type="email" id="hireEmail" name="email" placeholder="Your Email Address" required>
+        <span class="hire-error" data-error-for="hireEmail"></span>
+      </div>
+      <div class="hire-field">
+        <textarea id="hireMessage" name="message" rows="3" placeholder="What would you like to work on?" required></textarea>
+        <span class="hire-error" data-error-for="hireMessage"></span>
+      </div>
+      <button type="submit" class="hire-submit-btn" id="hireSubmitBtn">SEND MESSAGE</button>
+    </form>
+  </div>
+</div>
+
+<script src="js/jquery-3.2.1.min.js" defer></script>
+<script src="js/popper.min.js" defer></script>
+<script src="js/bootstrap.min.js" defer></script>
+<script src="js/jquery.easing.1.3.js" defer></script>
+<script src="js/jquery.waypoints.min.js" defer></script>
+<script src="js/jquery.animateNumber.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js" defer></script>
+
+<script src="js/main.js" defer></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  if (!window.particlesJS || !document.getElementById("particles-js")) return;
+
+  particlesJS("particles-js", {
+    particles: {
+      number: {
+        value: 86,
+        density: {
+          enable: true,
+          value_area: 900
+        }
+      },
+      color: {
+        value: "#000000"
+      },
+      shape: {
+        type: "circle"
+      },
+      opacity: {
+        value: 0.6,
+        random: true,
+        anim: {
+          enable: true,
+          speed: 0.8,
+          opacity_min: 0.16,
+          sync: false
+        }
+      },
+      size: {
+        value: 3,
+        random: true
+      },
+      line_linked: {
+        enable: true,
+        distance: 150,
+        color: "#000000",
+        opacity: 0.15,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 2,
+        direction: "none",
+        random: false,
+        straight: false,
+        out_mode: "out",
+        bounce: false
       }
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: {
+          enable: true,
+          mode: "grab"
+        },
+        onclick: {
+          enable: true,
+          mode: "push"
+        },
+        resize: true
+      },
+      modes: {
+        grab: {
+          distance: 150,
+          line_linked: {
+            opacity: 0.65
+          }
+        },
+        push: {
+          particles_nb: 4
+        }
+      }
+    },
+    retina_detect: true
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const footerParticles = document.getElementById("particles-footer");
+  const footerContent = document.querySelector("#footer .footer-content");
 
-      for (let i = 0; i < points.length; i++) {
-        for (let j = i + 1; j < points.length; j++) {
-          const a = points[i];
-          const b = points[j];
-          const dx = a.x - b.x;
-          const dy = a.y - b.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
+  if (window.particlesJS && footerParticles) {
+    const footerParticleCount = window.matchMedia("(max-width: 768px)").matches ? 30 : 60;
 
-          if (distance < 150) {
-            ctx.strokeStyle = "rgba(120, 120, 120," + (0.15 * (1 - distance / 150)) + ")";
-            ctx.lineWidth = 1;
-            ctx.beginPath();
-            ctx.moveTo(a.x, a.y);
-            ctx.lineTo(b.x, b.y);
-            ctx.stroke();
+    particlesJS("particles-footer", {
+      particles: {
+        number: {
+          value: footerParticleCount,
+          density: {
+            enable: true,
+            value_area: 800
+          }
+        },
+        color: {
+          value: "#000000"
+        },
+        shape: {
+          type: "circle"
+        },
+        opacity: {
+          value: 0.4,
+          random: true
+        },
+        size: {
+          value: 2.5,
+          random: true
+        },
+        line_linked: {
+          enable: true,
+          distance: 130,
+          color: "#000000",
+          opacity: 0.12,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 1.5,
+          direction: "none",
+          random: true,
+          out_mode: "out"
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: true,
+            mode: "repulse"
+          },
+          onclick: {
+            enable: true,
+            mode: "push"
+          },
+          resize: true
+        },
+        modes: {
+          repulse: {
+            distance: 80,
+            duration: 0.4
+          },
+          push: {
+            particles_nb: 3
           }
         }
-      }
+      },
+      retina_detect: true
+    });
+  }
 
-      for (const p of points) {
-        ctx.fillStyle = "rgba(90, 90, 90, 0.34)";
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fill();
-      }
+  if (!footerContent) return;
 
-      requestAnimationFrame(drawNetwork);
+  if (!("IntersectionObserver" in window)) {
+    footerContent.classList.add("visible");
+    return;
+  }
+
+  const footerObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (!entry.isIntersecting) return;
+      footerContent.classList.add("visible");
+      footerObserver.unobserve(entry.target);
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  footerObserver.observe(footerContent);
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  let emailJsReady;
+
+  function loadEmailJs() {
+    if (window.emailjs) {
+      return Promise.resolve(window.emailjs);
     }
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
+    if (!emailJsReady) {
+      emailJsReady = new Promise(function(resolve, reject) {
+        const script = document.createElement("script");
+        script.src = "https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js";
+        script.async = true;
+        script.onload = function() {
+          window.emailjs.init("D5g7iJZVaHyjR5SKr");
+          resolve(window.emailjs);
+        };
+        script.onerror = reject;
+        document.body.appendChild(script);
       });
-    }, { threshold: 0.16 });
+    }
 
-    document.querySelectorAll(".section-inner").forEach((section) => {
-      observer.observe(section);
+    return emailJsReady;
+  }
+
+  window.loadEmailJs = loadEmailJs;
+});
+</script>
+<script>
+const tabs = document.querySelectorAll(".tab-btn");
+const contents = document.querySelectorAll(".tab-content");
+const resumeSection = document.getElementById("resume-section");
+const resumeNavLinks = document.querySelectorAll("#navi [data-page]");
+const resumePages = document.querySelectorAll("#resume-section .page");
+
+function showResumePage(pageId) {
+  if (!resumeSection || !pageId) return;
+
+  resumeSection.classList.add("resume-tabs-ready");
+
+  resumePages.forEach(page => {
+    page.classList.toggle("active", page.id === pageId);
+  });
+
+  resumeNavLinks.forEach(link => {
+    link.classList.toggle("current", link.dataset.page === pageId);
+  });
+}
+
+showResumePage("page-1");
+
+resumeNavLinks.forEach(link => {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+    const pageId = this.dataset.page;
+    showResumePage(pageId);
+    window.history.replaceState(null, "", window.location.pathname + window.location.search);
+  });
+});
+
+function activateSkillTab(tab) {
+  if (!tab) return;
+
+  tabs.forEach(item => item.classList.remove("active"));
+  contents.forEach(content => content.classList.remove("active"));
+
+  tab.classList.add("active");
+  document.getElementById(tab.dataset.tab).classList.add("active");
+}
+
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => activateSkillTab(tab));
+});
+
+document.querySelectorAll(".footer-skill-tab").forEach(link => {
+  link.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    const targetTab = this.dataset.footerTab;
+    const tabButton = document.querySelector(`.tab-btn[data-tab="${targetTab}"]`);
+    const tabContent = document.getElementById(targetTab);
+    const skillsSection = document.getElementById("page-3");
+
+    if (!tabButton || !tabContent || !skillsSection) return;
+
+    document.querySelectorAll(".footer-skill-tab").forEach(item => item.classList.remove("active"));
+
+    activateSkillTab(tabButton);
+    this.classList.add("active");
+    showResumePage("page-3");
+
+    skillsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+});
+
+const eduCards = document.querySelectorAll("#page-1 .edu-card");
+
+if ("IntersectionObserver" in window) {
+  const eduObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+
+      const delay = Number(entry.target.dataset.eduIndex || 0) * 150;
+
+      setTimeout(() => {
+        entry.target.classList.add("edu-card--visible");
+      }, delay);
+
+      eduObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.15 });
+
+  eduCards.forEach((card, index) => {
+    card.dataset.eduIndex = index;
+    eduObserver.observe(card);
+  });
+} else {
+  eduCards.forEach(card => card.classList.add("edu-card--visible"));
+}
+
+const expCards = document.querySelectorAll("#page-2 .exp-card");
+
+if ("IntersectionObserver" in window) {
+  const expObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+
+      const delay = Number(entry.target.dataset.expIndex || 0) * 150;
+
+      setTimeout(() => {
+        entry.target.classList.add("exp-card--visible");
+      }, delay);
+
+      expObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.15 });
+
+  expCards.forEach((card, index) => {
+    card.dataset.expIndex = index;
+    expObserver.observe(card);
+  });
+} else {
+  expCards.forEach(card => card.classList.add("exp-card--visible"));
+}
+
+const certSlides = document.querySelectorAll("#page-4 .cert-slide");
+const certDots = document.querySelectorAll("#page-4 .cert-dot");
+const certPrevBtn = document.querySelector("#page-4 .cert-prev");
+const certNextBtn = document.querySelector("#page-4 .cert-next");
+const certCounterEl = document.querySelector("#page-4 .cert-counter");
+const certTrack = document.querySelector("#page-4 .cert-slider-track");
+const certPage = document.getElementById("page-4");
+let certCurrent = 0;
+let certDesktopCurrent = 0;
+let certDirection = "right";
+let certTouchStartX = 0;
+let certAutoSlideTimer = null;
+let certResumeTimer = null;
+let certDragStartX = 0;
+let certIsDragging = false;
+
+function getCertVisibleCount() {
+  if (window.innerWidth >= 1024) return 3;
+  if (window.innerWidth >= 768) return 2;
+  return 1;
+}
+
+function updateCertCounter(startIndex) {
+  if (!certCounterEl || !certSlides.length) return;
+
+  const visibleCount = getCertVisibleCount();
+  const total = certSlides.length;
+
+  if (visibleCount === 1) {
+    certCounterEl.innerHTML = '<span class="cert-current">' + (startIndex + 1) + '</span> / <span class="cert-total">' + total + '</span>';
+  } else {
+    const end = Math.min(startIndex + visibleCount, total);
+    certCounterEl.textContent = "Showing " + (startIndex + 1) + "\u2013" + end + " of " + total;
+  }
+}
+
+function updateCertSlides(startIndex, dir) {
+  if (!certSlides.length) return;
+
+  const total = certSlides.length;
+  const visibleCount = getCertVisibleCount();
+  const normalizedIndex = (startIndex + total) % total;
+  const activeClasses = ["active", "active-2", "active-3"];
+
+  certSlides.forEach(slide => {
+    slide.classList.remove("active", "active-2", "active-3", "slide-left");
+  });
+
+  certDots.forEach(dot => dot.classList.remove("active"));
+
+  for (let i = 0; i < visibleCount; i++) {
+    const slideIndex = (normalizedIndex + i) % total;
+    certSlides[slideIndex].classList.add(activeClasses[i]);
+    if (dir === "left" && i === 0) {
+      certSlides[slideIndex].classList.add("slide-left");
+    }
+  }
+
+  if (certDots[normalizedIndex]) certDots[normalizedIndex].classList.add("active");
+
+  certDesktopCurrent = normalizedIndex;
+  certCurrent = normalizedIndex;
+  updateCertCounter(normalizedIndex);
+
+  if (certPrevBtn) certPrevBtn.disabled = false;
+  if (certNextBtn) certNextBtn.disabled = false;
+}
+
+function stopCertAutoSlide() {
+  if (certAutoSlideTimer) {
+    clearInterval(certAutoSlideTimer);
+    certAutoSlideTimer = null;
+  }
+
+  if (certResumeTimer) {
+    clearTimeout(certResumeTimer);
+    certResumeTimer = null;
+  }
+}
+
+function startCertAutoSlide() {
+  stopCertAutoSlide();
+  if (!certSlides.length) return;
+
+  certAutoSlideTimer = setInterval(function() {
+    certDirection = "right";
+    updateCertSlides(certDesktopCurrent + 1, "right");
+  }, 2000);
+}
+
+function scheduleCertAutoSlide(delay) {
+  stopCertAutoSlide();
+  if (certResumeTimer) clearTimeout(certResumeTimer);
+  certResumeTimer = setTimeout(startCertAutoSlide, delay);
+}
+
+if (certSlides.length && certPrevBtn && certNextBtn) {
+  updateCertSlides(0, "right");
+  startCertAutoSlide();
+
+  certPrevBtn.addEventListener("click", function() {
+    stopCertAutoSlide();
+    certDirection = "left";
+    updateCertSlides(certDesktopCurrent - 1, "left");
+    scheduleCertAutoSlide(4000);
+  });
+
+  certNextBtn.addEventListener("click", function() {
+    stopCertAutoSlide();
+    certDirection = "right";
+    updateCertSlides(certDesktopCurrent + 1, "right");
+    scheduleCertAutoSlide(4000);
+  });
+
+  certDots.forEach((dot, index) => {
+    dot.addEventListener("click", function() {
+      stopCertAutoSlide();
+      certDirection = index > certCurrent ? "right" : "left";
+      updateCertSlides(index, certDirection);
+      scheduleCertAutoSlide(4000);
+    });
+  });
+
+  document.addEventListener("keydown", function(event) {
+    if (certPage && !certPage.classList.contains("active")) return;
+
+    if (event.key === "ArrowLeft") {
+      stopCertAutoSlide();
+      certDirection = "left";
+      updateCertSlides(certDesktopCurrent - 1, "left");
+      scheduleCertAutoSlide(4000);
+    }
+
+    if (event.key === "ArrowRight") {
+      stopCertAutoSlide();
+      certDirection = "right";
+      updateCertSlides(certDesktopCurrent + 1, "right");
+      scheduleCertAutoSlide(4000);
+    }
+  });
+
+  if (certTrack) {
+    certTrack.style.cursor = "grab";
+
+    certTrack.addEventListener("touchstart", function(event) {
+      stopCertAutoSlide();
+      certTouchStartX = event.touches[0].clientX;
+    }, { passive: true });
+
+    certTrack.addEventListener("touchend", function(event) {
+      const diff = certTouchStartX - event.changedTouches[0].clientX;
+
+      if (Math.abs(diff) > 50) {
+        certDirection = diff > 0 ? "right" : "left";
+        updateCertSlides(certDesktopCurrent + (diff > 0 ? 1 : -1), certDirection);
+      }
+
+      scheduleCertAutoSlide(3000);
+    }, { passive: true });
+
+    certTrack.addEventListener("mousedown", function(event) {
+      certDragStartX = event.clientX;
+      certIsDragging = true;
+      stopCertAutoSlide();
+      certTrack.style.cursor = "grabbing";
     });
 
-    window.addEventListener("resize", resizeCanvas);
-    resizeCanvas();
-    drawNetwork();
-  </script>
+    certTrack.addEventListener("mouseup", function(event) {
+      if (!certIsDragging) return;
+
+      certIsDragging = false;
+      certTrack.style.cursor = "grab";
+
+      const diff = certDragStartX - event.clientX;
+      if (Math.abs(diff) > 60) {
+        certDirection = diff > 0 ? "right" : "left";
+        updateCertSlides(certDesktopCurrent + (diff > 0 ? 1 : -1), certDirection);
+      }
+
+      scheduleCertAutoSlide(3000);
+    });
+
+    certTrack.addEventListener("mouseleave", function() {
+      if (!certIsDragging) return;
+      certIsDragging = false;
+      certTrack.style.cursor = "grab";
+      scheduleCertAutoSlide(3000);
+    });
+
+    certTrack.querySelectorAll("img").forEach(img => {
+      img.addEventListener("dragstart", function(event) {
+        event.preventDefault();
+      });
+    });
+  }
+
+  window.addEventListener("resize", function() {
+    stopCertAutoSlide();
+    updateCertSlides(certDesktopCurrent, "right");
+    scheduleCertAutoSlide(500);
+  });
+}
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const modal = document.getElementById("hireModal");
+  const openBtn = document.getElementById("openHireModal");
+  const closeBtn = document.getElementById("closeHireModal");
+  const form = document.getElementById("hireForm");
+  const submitBtn = document.getElementById("hireSubmitBtn");
+  const fields = {
+    hireName: document.getElementById("hireName"),
+    hireEmail: document.getElementById("hireEmail"),
+    hireMessage: document.getElementById("hireMessage")
+  };
+
+  if (!modal || !openBtn || !closeBtn || !form || !submitBtn) return;
+  if (modal.dataset.hireModalBound === "true") return;
+  modal.dataset.hireModalBound = "true";
+
+  function setError(fieldId, message) {
+    const error = form.querySelector(`[data-error-for="${fieldId}"]`);
+    if (error) error.textContent = message;
+  }
+
+  function clearErrors() {
+    Object.keys(fields).forEach(fieldId => setError(fieldId, ""));
+  }
+
+  function openModal() {
+    clearErrors();
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("hire-modal-open");
+    fields.hireName.focus();
+  }
+
+  function closeModal() {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("hire-modal-open");
+    form.reset();
+    clearErrors();
+    submitBtn.textContent = "SEND MESSAGE";
+    submitBtn.disabled = false;
+    submitBtn.classList.remove("is-success");
+  }
+
+  function validateForm() {
+    let isValid = true;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    clearErrors();
+
+    if (!fields.hireName.value.trim()) {
+      setError("hireName", "Please enter your name.");
+      isValid = false;
+    }
+
+    if (!fields.hireEmail.value.trim()) {
+      setError("hireEmail", "Please enter your email address.");
+      isValid = false;
+    } else if (!emailPattern.test(fields.hireEmail.value.trim())) {
+      setError("hireEmail", "Please enter a valid email address.");
+      isValid = false;
+    }
+
+    if (!fields.hireMessage.value.trim()) {
+      setError("hireMessage", "Please enter your message.");
+      isValid = false;
+    }
+
+    return isValid;
+  }
+
+  openBtn.addEventListener("click", openModal);
+  closeBtn.addEventListener("click", closeModal);
+  modal.addEventListener("click", function(event) {
+    if (event.target === modal) closeModal();
+  });
+
+  document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape" && modal.classList.contains("is-open")) closeModal();
+  });
+
+  Object.values(fields).forEach(field => {
+    field.addEventListener("input", function() {
+      setError(field.id, "");
+    });
+  });
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    if (!validateForm()) return;
+
+    submitBtn.textContent = "SENDING...";
+    submitBtn.disabled = true;
+
+    window.loadEmailJs().then(function(emailjs) {
+      return emailjs.send("service_rqyjqbr", "template_a1mkxjj", {
+        from_name: fields.hireName.value.trim(),
+        from_email: fields.hireEmail.value.trim(),
+        reply_to: fields.hireEmail.value.trim(),
+        to_email: "raipra00@gmail.com",
+        recipient_email: "raipra00@gmail.com",
+        subject: "Hire Me Inquiry",
+        message: fields.hireMessage.value.trim()
+      });
+    }).then(function() {
+      submitBtn.textContent = "\u2713 Message Sent!";
+      submitBtn.classList.add("is-success");
+
+      setTimeout(closeModal, 2000);
+    }, function() {
+      setError("hireMessage", "Message could not be sent. Please try again.");
+      submitBtn.textContent = "SEND MESSAGE";
+      submitBtn.disabled = false;
+    });
+  });
+});
+</script>
 </body>
 </html>
+
+
+
