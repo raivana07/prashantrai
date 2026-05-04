@@ -986,34 +986,6 @@ h1, h2, h3, h4, h5,
 	}
 }
 
-// HIRE ME
-.ftco-hireme{
-	background: $primary;
-	z-index: 0;
-	position: relative;
-	.overlay{
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		content: '';
-		background: $primary;
-		opacity: .7;
-	}
-	h2{
-		color: $white;
-		font-size: 40px;
-		font-weight: 900;
-		span{
-			color: $secondary;
-		}
-	}
-	p{
-		color: rgba(255,255,255,.9);
-	}
-}
-
 
 //PROJECT
 .project{
