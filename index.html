@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/ionicons.min.css">
 
     <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/style.css?v=mobile-tabs-exp-1">
+    <link rel="stylesheet" href="css/style.css?v=ios-tabs-fix-1">
     <script>
       if (/^#page-[1-5]$/.test(window.location.hash)) {
         window.history.replaceState(null, "", window.location.pathname + window.location.search);
@@ -1506,6 +1506,12 @@ const contents = document.querySelectorAll(".tab-content");
 const resumeSection = document.getElementById("resume-section");
 const resumeNavLinks = document.querySelectorAll("#navi [data-page]");
 const resumePages = document.querySelectorAll("#resume-section .page");
+const isIOSDevice = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+  (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+if (isIOSDevice) {
+  document.documentElement.classList.add("is-ios");
+}
 
 function showResumePage(pageId) {
   if (!resumeSection || !pageId) return;
@@ -1522,6 +1528,12 @@ function showResumePage(pageId) {
 
   const activePage = document.getElementById(pageId);
   if (activePage) {
+    activePage.querySelectorAll(".ftco-animate").forEach(item => {
+      item.classList.add("ftco-animated");
+      item.style.opacity = "1";
+      item.style.visibility = "visible";
+      item.style.transform = "none";
+    });
     activePage.querySelectorAll(".edu-card").forEach(card => card.classList.add("edu-card--visible"));
     activePage.querySelectorAll(".exp-card").forEach(card => card.classList.add("exp-card--visible"));
     activePage.querySelectorAll(".platform-card").forEach(card => {

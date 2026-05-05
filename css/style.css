@@ -14785,6 +14785,55 @@ body > footer {
   }
 }
 
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 991.98px) {
+    html.is-ios #resume-section,
+    html.is-ios #resume-section .container,
+    html.is-ios #resume-section .row,
+    html.is-ios #resume-section .col-md-9,
+    html.is-ios #resume-section.resume-tabs-ready .page.active {
+      height: auto !important;
+      min-height: 0 !important;
+      max-height: none !important;
+      overflow: visible !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+    }
+
+    html.is-ios #resume-section.resume-tabs-ready .page:not(.active) {
+      display: none !important;
+    }
+
+    html.is-ios #resume-section.resume-tabs-ready .page.active {
+      display: block !important;
+    }
+
+    html.is-ios #resume-section.resume-tabs-ready .page.active .ftco-animate,
+    html.is-ios #resume-section.resume-tabs-ready .page.active .edu-card,
+    html.is-ios #resume-section.resume-tabs-ready .page.active .exp-card,
+    html.is-ios #resume-section.resume-tabs-ready .page.active .mini-card,
+    html.is-ios #resume-section.resume-tabs-ready .page.active .platform-card,
+    html.is-ios #resume-section.resume-tabs-ready .page.active .cert-section {
+      display: revert;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+      filter: none !important;
+    }
+
+    html.is-ios #resume-section #page-1.page.active .edu-card,
+    html.is-ios #resume-section #page-2.page.active .exp-card {
+      display: flex !important;
+    }
+
+    html.is-ios #resume-section #page-5.page.active .platform-card,
+    html.is-ios #resume-section #page-4.page.active .cert-section {
+      display: block !important;
+    }
+  }
+}
+
 /* Inter font only */
 body,
 button,
