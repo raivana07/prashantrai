@@ -16026,3 +16026,488 @@ body.nav-menu-open {
     background: #ffffff;
   }
 }
+
+/* Premium polish pass */
+:root {
+  --premium-ink: #1d1d1f;
+  --premium-muted: #6e6e73;
+  --premium-blue: #3e64ff;
+  --premium-green: #2ecc71;
+  --premium-border: rgba(29, 29, 31, 0.09);
+  --premium-surface: rgba(255, 255, 255, 0.82);
+  --premium-shadow: 0 18px 48px rgba(29, 29, 31, 0.08);
+  --premium-soft-shadow: 0 8px 28px rgba(29, 29, 31, 0.06);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--premium-ink);
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(62, 100, 255, 0.18);
+  color: var(--premium-ink);
+}
+
+a,
+button,
+.btn,
+.nav-link {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible,
+.platform-card:focus-visible,
+.cert-verify-btn:focus-visible {
+  outline: 3px solid rgba(62, 100, 255, 0.28) !important;
+  outline-offset: 4px !important;
+}
+
+.ftco-navbar-light {
+  border-bottom: 1px solid rgba(29, 29, 31, 0.06);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.ftco-navbar-light.scrolled,
+.ftco-navbar-light.awake {
+  box-shadow: 0 10px 35px rgba(29, 29, 31, 0.06);
+}
+
+.heading-section h2,
+#resume-section .page .heading,
+#resume-section #page-4 .cert-heading {
+  letter-spacing: -0.045em;
+}
+
+#about-section .heading-section p {
+  max-width: 1180px;
+  color: #1f2937;
+}
+
+.about-info li {
+  border-bottom: 1px solid rgba(29, 29, 31, 0.05);
+  padding-bottom: 8px;
+}
+
+.about-info li:last-child {
+  border-bottom: 0;
+}
+
+.stat-line {
+  padding-top: 2px;
+}
+
+.about-action-row {
+  gap: 14px;
+}
+
+#navi {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.74)) !important;
+  border: 1px solid rgba(46, 204, 113, 0.14);
+  border-radius: 22px;
+  box-shadow: 0 16px 44px rgba(29, 29, 31, 0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+#navi li a,
+#navi li button {
+  overflow: hidden !important;
+  isolation: isolate;
+  box-shadow: 0 10px 24px rgba(29, 29, 31, 0.04) !important;
+}
+
+#navi li a::before,
+#navi li button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  background:
+    radial-gradient(circle at 25% 20%, rgba(62, 100, 255, 0.12), transparent 36%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(241, 250, 246, 0.88));
+  transition: opacity 0.25s ease;
+}
+
+#navi li a:hover::before,
+#navi li button:hover::before {
+  opacity: 1;
+}
+
+#navi li a.current,
+#navi li button.current {
+  border-color: rgba(16, 24, 40, 0.92) !important;
+  box-shadow:
+    0 14px 34px rgba(46, 204, 113, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.32) !important;
+}
+
+.resume-wrap,
+.mini-card,
+.platform-card,
+#resume-section #page-4 .cert-slide-inner {
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.resume-wrap:hover,
+.mini-card:hover {
+  border-color: rgba(62, 100, 255, 0.16) !important;
+  box-shadow: var(--premium-shadow) !important;
+  transform: translateY(-4px);
+}
+
+.company-link,
+.institution-link {
+  text-underline-offset: 4px;
+}
+
+.platforms-grid,
+#resume-section #page-4 .cert-slider-track {
+  scrollbar-color: rgba(62, 100, 255, 0.35) transparent;
+  scrollbar-width: thin;
+}
+
+.platforms-grid::-webkit-scrollbar,
+#resume-section #page-4 .cert-slider-track::-webkit-scrollbar {
+  height: 8px;
+}
+
+.platforms-grid::-webkit-scrollbar-thumb,
+#resume-section #page-4 .cert-slider-track::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, rgba(62, 100, 255, 0.28), rgba(46, 204, 113, 0.28));
+  border-radius: 999px;
+}
+
+.platform-card {
+  box-shadow:
+    0 18px 48px rgba(29, 29, 31, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+}
+
+.platform-card:hover,
+.platform-card:focus-visible,
+.platform-card:focus-within {
+  box-shadow:
+    0 18px 54px rgba(29, 29, 31, 0.12),
+    0 0 0 1.5px rgba(var(--brand-rgb), 0.32) !important;
+}
+
+.card-popup {
+  min-height: 178px;
+}
+
+#resume-section #page-4 .cert-slide-inner {
+  box-shadow:
+    0 22px 54px rgba(29, 29, 31, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45) !important;
+}
+
+#resume-section #page-4 .cert-slide-inner:hover {
+  box-shadow:
+    0 26px 68px rgba(29, 29, 31, 0.14),
+    0 0 0 1px rgba(62, 100, 255, 0.28) !important;
+}
+
+#resume-section #page-4 .cert-issuer-badge,
+#resume-section #page-4 .cert-verify-btn {
+  box-shadow: 0 10px 28px rgba(29, 29, 31, 0.12);
+}
+
+.overlay-nav-link.is-previewed .link-text {
+  color: #6c63ff;
+}
+
+.footer-content {
+  border-top: 1px solid rgba(29, 29, 31, 0.08);
+}
+
+@media (min-width: 992px) {
+  .platform-card {
+    width: 286px;
+    flex-basis: 286px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #navi {
+    position: relative !important;
+    top: auto !important;
+    margin-bottom: 26px !important;
+  }
+
+  #navi ul {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px !important;
+  }
+
+  #navi li,
+  #navi li a,
+  #navi li button {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #navi {
+    padding: 12px !important;
+    border-radius: 18px;
+  }
+
+  #navi ul {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px !important;
+  }
+
+  #navi li button,
+  #navi li a {
+    min-width: 0 !important;
+    min-height: 48px !important;
+    padding: 11px 10px !important;
+  }
+
+  #resume-section .page .heading {
+    margin-top: 8px;
+  }
+
+  .about-action-row {
+    gap: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Premium resume rails */
+#resume-section #page-1,
+#resume-section #page-2 {
+  overflow: visible;
+}
+
+.resume-card-rail {
+  display: flex;
+  gap: 22px;
+  width: 100%;
+  margin: 26px 0 8px;
+  padding: 12px 8px 34px;
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-color: rgba(62, 100, 255, 0.34) transparent;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.resume-card-rail::-webkit-scrollbar {
+  height: 8px;
+}
+
+.resume-card-rail::-webkit-scrollbar-track {
+  background: rgba(29, 29, 31, 0.04);
+  border-radius: 999px;
+}
+
+.resume-card-rail::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, rgba(62, 100, 255, 0.35), rgba(46, 204, 113, 0.35));
+  border-radius: 999px;
+}
+
+.resume-card-rail .edu-card,
+.resume-card-rail .exp-card {
+  scroll-snap-align: start;
+  scroll-margin-left: 8px;
+}
+
+#resume-section #page-1 .resume-card-rail .edu-card,
+#resume-section #page-2 .resume-card-rail .exp-card {
+  display: flex !important;
+  flex: 0 0 min(430px, calc(100vw - 48px)) !important;
+  flex-direction: column !important;
+  gap: 18px;
+  min-height: 330px;
+  margin: 0 !important;
+  padding: 28px !important;
+  border: 1px solid rgba(29, 29, 31, 0.08) !important;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(247, 250, 255, 0.88)),
+    radial-gradient(circle at 88% 14%, rgba(62, 100, 255, 0.12), transparent 32%) !important;
+  box-shadow:
+    0 22px 60px rgba(29, 29, 31, 0.09),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+#resume-section #page-2 .resume-card-rail .exp-card {
+  flex-basis: min(470px, calc(100vw - 48px)) !important;
+  min-height: 470px;
+}
+
+#resume-section #page-1 .resume-card-rail .edu-card::before,
+#resume-section #page-2 .resume-card-rail .exp-card::before {
+  width: 80%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.55) 45%,
+    rgba(62, 100, 255, 0.12) 50%,
+    transparent 100%
+  );
+}
+
+#resume-section #page-1 .resume-card-rail .edu-card::after,
+#resume-section #page-2 .resume-card-rail .exp-card::after {
+  width: 100%;
+  height: 4px;
+  top: 0;
+  left: 0;
+  border-radius: 24px 24px 0 0;
+  transform: scaleX(0.38);
+  transform-origin: left center;
+}
+
+#resume-section #page-1 .resume-card-rail .edu-card:hover::after,
+#resume-section #page-2 .resume-card-rail .exp-card:hover::after {
+  transform: scaleX(1);
+}
+
+#resume-section #page-1 .resume-card-rail .edu-icon,
+#resume-section #page-2 .resume-card-rail .exp-icon {
+  align-self: flex-start;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 86px !important;
+  min-width: 86px !important;
+  height: 86px !important;
+  padding: 14px !important;
+  border: 1px solid rgba(29, 29, 31, 0.07) !important;
+  border-radius: 20px !important;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(239, 244, 255, 0.78)) !important;
+  box-shadow: 0 12px 30px rgba(29, 29, 31, 0.07) !important;
+}
+
+#resume-section #page-2 .resume-card-rail .exp-icon a {
+  width: 100%;
+  height: 100%;
+}
+
+#resume-section #page-1 .resume-card-rail .edu-icon img,
+#resume-section #page-2 .resume-card-rail .exp-icon img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+#resume-section #page-1 .resume-card-rail .text,
+#resume-section #page-2 .resume-card-rail .text {
+  width: 100%;
+  padding-left: 0 !important;
+}
+
+#resume-section #page-1 .resume-card-rail .edu-card h2,
+#resume-section #page-2 .resume-card-rail .exp-card h2 {
+  letter-spacing: -0.025em;
+}
+
+#resume-section #page-2 .resume-card-rail .exp-card p {
+  margin-bottom: 0;
+  max-height: 230px;
+  padding-right: 6px;
+  overflow-y: auto;
+  scrollbar-color: rgba(62, 100, 255, 0.22) transparent;
+  scrollbar-width: thin;
+}
+
+#resume-section #page-2 .resume-card-rail .exp-card p::-webkit-scrollbar {
+  width: 5px;
+}
+
+#resume-section #page-2 .resume-card-rail .exp-card p::-webkit-scrollbar-thumb {
+  background: rgba(62, 100, 255, 0.22);
+  border-radius: 999px;
+}
+
+#resume-section #page-1 .resume-card-rail .edu-card:hover,
+#resume-section #page-2 .resume-card-rail .exp-card:hover {
+  border-color: rgba(62, 100, 255, 0.22) !important;
+  box-shadow:
+    0 28px 76px rgba(29, 29, 31, 0.13),
+    0 0 0 1px rgba(62, 100, 255, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92) !important;
+}
+
+#resume-section #page-1 .heading,
+#resume-section #page-2 .heading {
+  margin-bottom: 0 !important;
+}
+
+@media (min-width: 1200px) {
+  #resume-section #page-1 .resume-card-rail .edu-card {
+    flex-basis: 380px !important;
+  }
+
+  #resume-section #page-2 .resume-card-rail .exp-card {
+    flex-basis: 450px !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .resume-card-rail {
+    gap: 16px;
+    margin-top: 20px;
+    padding: 10px 2px 28px;
+  }
+
+  #resume-section #page-1 .resume-card-rail .edu-card,
+  #resume-section #page-2 .resume-card-rail .exp-card {
+    flex-basis: min(330px, 88vw) !important;
+    min-height: auto;
+    padding: 22px !important;
+  }
+
+  #resume-section #page-2 .resume-card-rail .exp-card p {
+    max-height: 260px;
+  }
+
+  #resume-section #page-1 .resume-card-rail .edu-icon,
+  #resume-section #page-2 .resume-card-rail .exp-icon {
+    width: 74px !important;
+    min-width: 74px !important;
+    height: 74px !important;
+    padding: 12px !important;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 991.98px) {
+    html.is-ios #resume-section .resume-card-rail {
+      display: flex !important;
+      overflow-x: auto !important;
+      overflow-y: visible !important;
+    }
+
+    html.is-ios #resume-section #page-1.page.active .resume-card-rail .edu-card,
+    html.is-ios #resume-section #page-2.page.active .resume-card-rail .exp-card {
+      display: flex !important;
+    }
+  }
+}
