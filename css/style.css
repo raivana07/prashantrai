@@ -16314,6 +16314,65 @@ button:focus-visible,
   }
 }
 
+/* Smooth section movement + tighter Resume-to-footer spacing */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+}
+
+#resume-section,
+#footer {
+  scroll-margin-top: 92px;
+}
+
+#resume-section {
+  padding-bottom: clamp(14px, 2.5vw, 28px) !important;
+}
+
+#resume-section .page {
+  margin-bottom: clamp(20px, 3vw, 42px) !important;
+}
+
+#resume-section #page-1,
+#resume-section #page-2,
+#resume-section #page-3,
+#resume-section #page-4,
+#resume-section #page-5,
+#resume-section #page-6 {
+  padding-bottom: 0 !important;
+}
+
+#footer.ftco-footer {
+  padding-top: clamp(36px, 4vw, 56px) !important;
+}
+
+#footer .footer-divider {
+  margin-bottom: clamp(24px, 3vw, 32px) !important;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 76px;
+  }
+
+  #resume-section,
+  #footer {
+    scroll-margin-top: 76px;
+  }
+
+  #resume-section {
+    padding-bottom: 12px !important;
+  }
+
+  #resume-section .page {
+    margin-bottom: 24px !important;
+  }
+
+  #footer.ftco-footer {
+    padding-top: 34px !important;
+  }
+}
+
 /* Education + Experience premium static grid */
 html,
 body {
