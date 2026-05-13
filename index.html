@@ -1898,8 +1898,6 @@ function initEduExpSections() {
 
       if (Math.abs(diffX) <= Math.abs(diffY)) return;
 
-      event.preventDefault();
-      track.scrollLeft = touchScrollStart - diffX;
       updateState();
     }, { passive: false });
 
@@ -1941,6 +1939,11 @@ function initEduExpSections() {
     }
 
     section.eduExpReveal = revealSection;
+    section.eduExpRefresh = function() {
+      autoScrollPaused = isResponsiveExperience();
+      updateState();
+      if (!isResponsiveExperience()) startExperienceAutoScroll();
+    };
     autoScrollPaused = isResponsiveExperience();
     updateState();
     setTimeout(updateState, 250);
@@ -1959,6 +1962,10 @@ document.addEventListener("resumePageShown", function(event) {
     if (typeof section.eduExpReveal === "function") section.eduExpReveal();
     const track = section.querySelector("[data-scroll-track]");
     if (track) track.dispatchEvent(new Event("scroll"));
+    if (typeof section.eduExpRefresh === "function") {
+      window.requestAnimationFrame(section.eduExpRefresh);
+      window.setTimeout(section.eduExpRefresh, 120);
+    }
   });
 });
 const certSlides = document.querySelectorAll("#page-4 .cert-slide");

@@ -9812,13 +9812,15 @@ textarea.form-control {
 }
 
 .client-logo-grid {
+  --client-logo-gap: 56px;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: flex-start;
-  gap: 56px;
+  gap: var(--client-logo-gap);
   width: max-content;
-  animation: clientLogoFlow 48s linear infinite;
+  min-width: max-content;
+  animation: clientLogoFlow 38s linear infinite;
   will-change: transform;
 }
 
@@ -9911,17 +9913,31 @@ textarea.form-control {
 
 @keyframes clientLogoFlow {
   0% {
-    transform: translateX(-50%);
+    transform: translate3d(0, 0, 0);
   }
 
   100% {
-    transform: translateX(0);
+    transform: translate3d(calc(-50% - (var(--client-logo-gap) / 2)), 0, 0);
   }
 }
 
 @media (max-width: 767.98px) {
+  .client-logo-section {
+    width: 100%;
+    overflow: hidden !important;
+  }
+
+  .client-logo-section .container {
+    max-width: none;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+  }
+
   .client-logo-grid {
-    gap: 40px;
+    --client-logo-gap: 40px;
+    animation-duration: 28s;
   }
 
   .client-logo-item {
@@ -17420,12 +17436,12 @@ body {
     display: flex !important;
     gap: 14px;
     overflow-x: auto !important;
-    overflow-y: hidden !important;
+    overflow-y: visible !important;
     width: 100%;
     min-height: 0;
     padding: 0 48px 18px 16px;
     cursor: grab;
-    touch-action: pan-y;
+    touch-action: auto;
     overscroll-behavior-x: contain;
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
@@ -17452,11 +17468,11 @@ body {
     background:
       linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 255, 0.9));
     box-shadow: 0 12px 34px rgba(15, 17, 23, 0.06);
-    opacity: 1;
+    opacity: 1 !important;
     pointer-events: auto;
     scroll-snap-align: start;
     scroll-snap-stop: always;
-    transform: translateX(44px);
+    transform: none !important;
     transition:
       opacity 0.55s ease,
       transform 0.55s cubic-bezier(0.22, 0.68, 0, 1.2),
@@ -17464,11 +17480,11 @@ body {
   }
 
   #resume-section #page-2 .edu-exp-card.slide-in {
-    transform: translateX(0);
+    transform: none !important;
   }
 
   #resume-section #page-2 .edu-exp-card.slide-in:hover {
-    transform: translateY(-3px);
+    transform: translateY(-3px) !important;
   }
 
   #resume-section #page-2 .edu-exp-logo {
